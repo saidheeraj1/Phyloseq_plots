@@ -2,12 +2,18 @@
 Includes different plots like Bar plot, tree diagram etc
 # Tree diagram
 > library("ape")
+
 > physeq = phyloseq(newOTU, newTAX)
+
 > newrandom_tree = rtree(ntaxa(physeq), rooted = TRUE, tip.label = taxa_names(physeq))
+
 > plot(random_tree)
+
 > physeq1 = phyloseq(newOTU, newTAX, newrandom_tree)
+
 # Bar plot
 > plot_bar(physeq1, fill="taxonomy3")
+
 # Ordination
 > GP.chl = subset_taxa(physeq1)
 
